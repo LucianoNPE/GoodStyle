@@ -1,0 +1,411 @@
+/* -----------------HEADER----------------*/
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0);
+    grid-area: header;
+}
+
+.header__logo{
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------NAV----------------*/
+
+nav{
+    background-color: rgb(43, 43, 43);
+    grid-area: nav;
+    display: flex;
+    justify-content: center;
+    
+}
+.nav__buttons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px;
+    max-height: 250px;
+}
+.nav__button{
+    flex-wrap: wrap;
+    color: white;
+    text-decoration: none;
+}
+.nav__button:hover{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    padding: 5px;
+}
+.nav__button:active{
+    color: rgb(80, 80, 80);
+    font-weight: bold;
+    padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------CUERPO DE PAGINA----------------*/
+
+
+.container__box1{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(106, 106, 106);
+    grid-area: cuerpo;
+    text-align: center;
+}
+
+.container__box2{
+    background-color: rgb(235, 235, 235);
+    grid-area: cuerpo2;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------ASIDE Y FOOTER----------------*/
+
+aside {
+    display: flex;
+    color: white;
+    padding: 25px;
+    background-color: rgb(106, 106, 106);
+    flex-direction: column;
+    border: solid;
+    grid-area: aside;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: black;
+    grid-area: footer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------INDEX ----------------*/
+.index__titulo{
+    text-align: center;
+    background-color: black;
+    padding: 100px;
+    color: white;
+}
+.index__subtitulo{
+    text-align: center;
+    background-color: rgb(114, 181, 171);
+    padding: 5px;
+    font-size: larger;
+    color: white;
+}
+.index__cuerpo{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    gap: 60px;
+
+}
+.indexcuerpo__marcas{
+    display: flex;
+    align-items: center;
+    width: 70%;
+}
+.indexcuerpo__marcas img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+
+.indexcuerpo__marcas img:hover{
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+.index__button{
+    margin: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------PRODUCTOS----------------*/
+.productos__contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 110px;
+}
+.productos__imgRemera{
+    display: flex;
+    width: 100%;
+}
+.productos__titulo{
+    color: white;
+    padding: 5px;
+}
+.productos__contenedor img:hover{
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+    width: 105%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------NOSOTROS----------------*/
+.nosotros__frameUbi{
+    display: flex;
+    width: 90%;
+    height: 500px;
+}
+.nosotros__info{
+    flex-direction: column;
+    display: flex;
+    flex: wrap;
+    color: white;
+    padding: 50px;
+}
+.nosotros__ubi{
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------ENVÍOS----------------*/
+.envios__titulo{
+    color: white;
+    padding: 15px;
+}
+.envios__subtitulo{
+    margin-left: 20px;
+    color: rgb(75, 75, 75);
+}
+.envios__imagen{
+    display: flex;
+    width: 70%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------TALLES----------------*/
+
+
+
+.talles__titulo{
+    color: white;
+    padding: 15px;
+}
+
+.talles__subtitulo{
+    margin-left: 20px;
+    color: rgb(75, 75, 75);
+}
+.talles__imagen{
+    display: flex;
+    width: 70%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------MEDIA QUERY MOBILE----------------*/
+
+@media screen and (min-width: 320px){
+    
+    .productos__cajaremera{
+        width: 170px;
+    }
+    .container-grid{
+        display: grid;
+        grid-template: 
+        "header" 85px
+        "nav"   auto
+        "cuerpo" auto
+        "cuerpo2" auto
+        "aside" auto
+        "footer" 40px;
+        gap: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------MEDIA QUERY TABLETAS----------------*/
+
+@media screen and (min-width: 600px){
+
+    .productos__cajaremera{
+        width: 200px;
+    }
+    .container-grid{
+        display: grid;
+        grid-template: 
+        "header header" 100px
+        "nav cuerpo"   auto
+        "nav cuerpo2" auto
+        "aside aside" auto
+        "footer footer" 50px /
+        150px   auto;
+                
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------MEDIA QUERY PORTATILES----------------*/
+
+@media screen and (min-width: 1200px){
+    
+    .productos__cajaremera{
+        width: 300px;
+    }
+    .container-grid{
+        display: grid;
+        grid-template: 
+        "header header header" 100px
+        "nav cuerpo aside"   auto
+        "nav cuerpo2 aside" auto
+        "footer footer footer" 50px /
+        150px   auto 200px;
+                
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
